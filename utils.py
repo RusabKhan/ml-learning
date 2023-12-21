@@ -4,9 +4,9 @@ import numpy as np
 import tensorflow as tf
 
 
-def check():
+def check(load_model="numerical_model.h5"):
     model = tf.keras.models.load_model(
-        "numerical_model.h5"
+        f"models/{load_model}"
     )  # Replace with your model path
 
     # Load the image from your local machine
@@ -14,7 +14,7 @@ def check():
     image = Image.open(image_path)
 
     # Convert the image to grayscale (if needed) and resize it to 28x28 pixels
-    image = image.convert("L")  # Convert to grayscale
+    image = image.convert("RGB")  # Convert to grayscale
     image = image.resize((28, 28))
 
     # Convert the image to a NumPy array
