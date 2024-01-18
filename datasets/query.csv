@@ -1,0 +1,329 @@
+query;query_type;result;columns;table;database
+SELECT * FROM users WHERE id = 1;SELECT;Success;id;users;PostgreSQL
+INSERT INTO customers (name, email, age) VALUES ('John Doe', 'john@example.com', 25);INSERT;Success;name,email,age;customers;MySQL
+UPDATE employees SET salary = 60000 WHERE department = 'Sales';UPDATE;Success;salary;employees;sqlserver
+DELETE FROM products WHERE stock_quantity < 10;DELETE;Success;stock_quantity;products;sqlserver
+MERGE INTO orders USING sales_data ON orders.order_id = sales_data.order_id WHEN MATCHED THEN UPDATE SET orders.total_amount = sales_data.total_amount;MERGE;Success;order_id,total_amount;orders;MySQL
+INSERT INTO departments (dept_id, dept_name, location) VALUES (101, 'HR', 'New York');INSERT;Success;dept_id,dept_namelocation;departments;PostgreSQL
+UPDATE inventory SET stock = stock - 5 WHERE product_id = 102;UPDATE;Success;stock;inventory;PostgreSQL
+DELETE FROM suppliers WHERE rating < 3;DELETE;Success;suppliers;rating;MySQL
+INSERT INTO tasks (task_name, priority, status) VALUES ('Task A', 'High', 'Incomplete');INSERT;Success;task_name,priority,status;tasks;sqlserver
+UPDATE employees SET manager_id = 105 WHERE department = 'IT';UPDATE;Success;manager_id;employees;MySQL
+DELETE FROM customers WHERE last_purchase_date < '2023-01-01';DELETE;Success;customers;last_purchase_date;sqlserver
+MERGE INTO sales USING new_data ON sales.product_id = new_data.product_id WHEN MATCHED THEN UPDATE SET sales.quantity = new_data.quantity;MERGE;Success;product_id;quantity,sales;PostgreSQL
+INSERT INTO products (product_name, price, stock) VALUES ('Laptop', 1200, 50);INSERT;Success;product_name,price,stock;products;MySQL
+UPDATE employees SET role = 'Manager' WHERE department = 'HR';UPDATE;Success;role;employees;PostgreSQL
+DELETE FROM orders WHERE order_date < '2023-01-01';DELETE;Success;orders;order_date;MySQL
+SELECT * FROM employees WHERE department = 'IT';SELECT;Success;id,name,department,salary;employees;sqlserver
+INSERT INTO products (product_name, price, stock) VALUES ('Mouse', 20, 100);INSERT;Success;product_name,price,stock;products;MySQL
+UPDATE orders SET status = 'Shipped' WHERE order_date < '2023-03-01';UPDATE;Success;status;orders;PostgreSQL
+DELETE FROM suppliers WHERE rating < 2;DELETE;Success;id,name,rating;suppliers;MySQL
+MERGE INTO customer_orders USING order_data ON customer_orders.order_id = order_data.order_id WHEN MATCHED THEN UPDATE SET customer_orders.status = order_data.status;MERGE;Success;order_id,status;customer_orders;sqlserver
+INSERT INTO departments (dept_id, dept_name, location) VALUES (102, 'Finance', 'London');INSERT;Success;dept_id,dept_name,location;departments;PostgreSQL
+UPDATE inventory SET stock = stock + 20 WHERE product_id = 103;UPDATE;Success;stock;inventory;MySQL
+DELETE FROM tasks WHERE priority = 'Low';DELETE;Success;task_id,task_name,priority,status;tasks;PostgreSQL
+INSERT INTO employees (name, department, salary) VALUES ('Alice', 'HR', 55000);INSERT;Success;name,department,salary;employees;sqlserver
+UPDATE products SET price = price * 1.1;UPDATE;Success;price;products;PostgreSQL
+DELETE FROM customers WHERE last_purchase_date < '2023-02-01';DELETE;Success;id,name,email,last_purchase_date;customers;sqlserver
+MERGE INTO sales_data USING new_data ON sales_data.product_id = new_data.product_id WHEN MATCHED THEN UPDATE SET sales_data.quantity = new_data.quantity;MERGE;Success;product_id,quantity;sales_data;MySQL
+INSERT INTO orders (customer_id, total_amount, order_date) VALUES (201, 150.50, '2023-03-15');INSERT;Success;customer_id,total_amount,order_date;orders;PostgreSQL
+UPDATE employees SET role = 'Senior Developer' WHERE department = 'IT';UPDATE;Success;role;employees;MySQL
+DELETE FROM products WHERE stock <= 0;DELETE;Success;products;stock;PostgreSQL
+SELECT product_name, price FROM products WHERE stock > 50;SELECT;Success;product_name,price;products;MySQL
+INSERT INTO employees (name, department, salary) VALUES ('Bob', 'Marketing', 60000);INSERT;Success;name,department,salary;employees;PostgreSQL
+UPDATE orders SET status = 'Delivered' WHERE order_date < '2023-04-01';UPDATE;Success;status;orders;sqlserver
+DELETE FROM suppliers WHERE rating < 4;DELETE;Success;id,name,rating;suppliers;PostgreSQL
+MERGE INTO customer_details USING new_data ON customer_details.customer_id = new_data.customer_id WHEN MATCHED THEN UPDATE SET customer_details.email = new_data.email;MERGE;Success;customer_id,email;customer_details;MySQL
+INSERT INTO projects (project_name, start_date, end_date) VALUES ('Project X', '2023-05-01', '2023-12-31');INSERT;Success;project_name,start_date,end_date;projects;sqlserver
+UPDATE inventory SET stock = stock - 10 WHERE product_id = 104;UPDATE;Success;stock;inventory;PostgreSQL
+DELETE FROM tasks WHERE priority = 'Medium';DELETE;Success;task_id,task_name,priority,status;tasks;MySQL
+INSERT INTO employees (name, department, salary) VALUES ('Eva', 'Finance', 70000);INSERT;Success;name,department,salary;employees;PostgreSQL
+UPDATE products SET price = price * 1.05;UPDATE;Success;price;products;MySQL
+DELETE FROM customers WHERE last_purchase_date < '2023-03-01';DELETE;Success;id,name,email,last_purchase_date;customers;sqlserver
+MERGE INTO sales_data USING new_data ON sales_data.product_id = new_data.product_id WHEN MATCHED THEN UPDATE SET sales_data.quantity = new_data.quantity;MERGE;Success;product_id,quantity;sales_data;PostgreSQL
+INSERT INTO orders (customer_id, total_amount, order_date) VALUES (202, 200.75, '2023-04-15');INSERT;Success;customer_id,total_amount,order_date;orders;MySQL
+UPDATE employees SET role = 'Data Analyst' WHERE department = 'Marketing';UPDATE;Success;role;employees;PostgreSQL
+DELETE FROM products WHERE stock <= 5;DELETE;Success;products;stock;PostgreSQL
+SELECT fruit_name, color FROM fruits WHERE taste = 'Sweet';SELECT;Success;fruit_name,color;taste,fruits;MySQL
+INSERT INTO fintech_transactions (user_id, amount, transaction_date) VALUES (301, 500.50, '2023-06-10');INSERT;Success;user_id,amount,transaction_date;fintech_transactions;sqlserver
+UPDATE health_records SET blood_pressure = '120/80' WHERE patient_id = 401;UPDATE;Success;blood_pressure;health_records;PostgreSQL
+DELETE FROM fruit_inventory WHERE quantity < 50;DELETE;Success;fruit_id,quantity;fruit_inventory;MySQL
+MERGE INTO fintech_users USING new_data ON fintech_users.user_id = new_data.user_id WHEN MATCHED THEN UPDATE SET fintech_users.balance = new_data.balance;MERGE;Success;user_id,balance;fintech_users;sqlserver
+INSERT INTO seasons (season_name, start_date, end_date) VALUES ('Summer', '2023-06-21', '2023-09-22');INSERT;Success;season_name,start_date,end_date;seasons;PostgreSQL
+UPDATE health_checkup SET cholesterol = 'Normal' WHERE patient_id = 402;UPDATE;Success;cholesterol;health_checkup;MySQL
+DELETE FROM fruit_purchases WHERE purchase_date < '2023-05-01';DELETE;Success;purchase_id,purchase_date;fruit_purchases;sqlserver
+INSERT INTO fintech_users (user_name, email, balance) VALUES ('JohnDoe', 'john.doe@example.com', 1000.25);INSERT;Success;user_name,email,balance;fintech_users;PostgreSQL
+UPDATE fruit_inventory SET quantity = quantity - 10 WHERE fruit_id = 103;UPDATE;Success;quantity;fruit_inventory;MySQL
+DELETE FROM health_records WHERE patient_id = 404;DELETE;Success;patient_id;health_records;sqlserver
+MERGE INTO health_checkup USING new_data ON health_checkup.patient_id = new_data.patient_id WHEN MATCHED THEN UPDATE SET health_checkup.weight = new_data.weight;MERGE;Success;patient_id,weight;health_checkup;PostgreSQL
+INSERT INTO fintech_transactions (user_id, amount, transaction_date) VALUES (302, 750.75, '2023-06-15');INSERT;Success;user_id,amount,transaction_date;fintech_transactions;MySQL
+UPDATE fruit_inventory SET price_per_unit = price_per_unit * 1.1;UPDATE;Success;price_per_unit;fruit_inventory;sqlserver
+DELETE FROM health_checkup WHERE patient_id = 403;DELETE;Success;patient_id;health_checkup;PostgreSQL
+SELECT ethnicity, language FROM ethnic_groups WHERE population > 10000000;SELECT;Success;ethnicity,language;population,ethnic_groups;MySQL
+INSERT INTO countrymen_profiles (country_code, income, education_level) VALUES ('USA', 70000, 'Bachelor');INSERT;Success;country_code,income,education_level;countrymen_profiles;sqlserver
+UPDATE ethnicity_statistics SET median_age = 32 WHERE ethnicity = 'Asian';UPDATE;Success;median_age;ethnicity_statistics;PostgreSQL
+DELETE FROM country_population WHERE population < 5000000;DELETE;Success;country_code,population;country_population;MySQL
+MERGE INTO country_languages USING new_data ON country_languages.country_code = new_data.country_code WHEN MATCHED THEN UPDATE SET country_languages.main_language = new_data.main_language;MERGE;Success;country_code,main_language;country_languages;sqlserver
+INSERT INTO world_regions (region_name, countries_count, dominant_language) VALUES ('Middle East', 15, 'Arabic');INSERT;Success;region_name,countries_count,dominant_language;world_regions;PostgreSQL
+UPDATE ethnicity_statistics SET life_expectancy = '80-85' WHERE ethnicity = 'European';UPDATE;Success;life_expectancy;ethnicity_statistics;MySQL
+DELETE FROM country_resources WHERE resource_type = 'Oil' AND quantity < 1000000;DELETE;Success;resource_type,quantity;country_resources;sqlserver
+INSERT INTO countrymen_profiles (country_code, income, education_level) VALUES ('India', 30000, 'High School');INSERT;Success;country_code,income,education_level;countrymen_profiles;PostgreSQL
+UPDATE country_population SET population = population * 1.02;UPDATE;Success;population;country_population;MySQL
+DELETE FROM ethnic_groups WHERE population < 500000;DELETE;Success;ethnicity,language,population;ethnic_groups;sqlserver
+MERGE INTO country_languages USING new_data ON country_languages.country_code = new_data.country_code WHEN MATCHED THEN UPDATE SET country_languages.dominant_religion = new_data.dominant_religion;MERGE;Success;country_code,dominant_religion;country_languages;PostgreSQL
+INSERT INTO world_regions (region_name, countries_count, dominant_language) VALUES ('Africa', 54, 'English');INSERT;Success;region_name,countries_count,dominant_language;world_regions;MySQL
+UPDATE ethnicity_statistics SET median_income = 45000 WHERE ethnicity = 'African';UPDATE;Success;median_income;ethnicity_statistics;sqlserver
+DELETE FROM country_resources WHERE resource_type = 'Renewable Energy' AND quantity < 500000;DELETE;Success;resource_type,quantity;country_resources;PostgreSQL
+SELECT title, author FROM articles WHERE category = 'Technology';SELECT;Success;title,author;category,articles;MySQL
+INSERT INTO car_inventory (make, model, year, price) VALUES ('Toyota', 'Camry', 2023, 25000);INSERT;Success;make,model,year,price;car_inventory;sqlserver
+UPDATE bike_catalog SET price = price * 1.05 WHERE type = 'Mountain';UPDATE;Success;price;bike_catalog;PostgreSQL
+DELETE FROM air_quality_data WHERE pollutant_level > 100;DELETE;Success;location,pollutant_level;air_quality_data;MySQL
+MERGE INTO article_comments USING new_data ON article_comments.article_id = new_data.article_id WHEN MATCHED THEN UPDATE SET article_comments.likes = new_data.likes;MERGE;Success;article_id,likes;article_comments;sqlserver
+INSERT INTO car_reviews (car_make, car_model, rating, review_text) VALUES ('Honda', 'Civic', 4.5, 'Great fuel efficiency!');INSERT;Success;car_make,car_model,rating,review_text;car_reviews;PostgreSQL
+UPDATE bike_catalog SET stock = stock - 3 WHERE type = 'Road';UPDATE;Success;stock;bike_catalog;MySQL
+DELETE FROM air_quality_data WHERE location = 'City Center' AND pollutant_type = 'NO2';DELETE;Success;location,pollutant_type;air_quality_data;sqlserver
+INSERT INTO article_comments (article_id, user_name, comment_text) VALUES (101, 'TechEnthusiast', 'Interesting insights!');INSERT;Success;article_id,user_name,comment_text;article_comments;PostgreSQL
+UPDATE car_inventory SET price = price * 1.1 WHERE make = 'Ford';UPDATE;Success;price;car_inventory;MySQL
+DELETE FROM bike_catalog WHERE stock <= 0;DELETE;Success;type,stock;bike_catalog;sqlserver
+MERGE INTO air_quality_data USING new_data ON air_quality_data.location = new_data.location WHEN MATCHED THEN UPDATE SET air_quality_data.pollutant_level = new_data.pollutant_level;MERGE;Success;location,pollutant_level;air_quality_data;PostgreSQL
+INSERT INTO car_inventory (make, model, year, price) VALUES ('Chevrolet', 'Malibu', 2023, 28000);INSERT;Success;make,model,year,price;car_inventory;MySQL
+UPDATE bike_catalog SET price = price * 1.07 WHERE type = 'Electric';UPDATE;Success;price;bike_catalog;sqlserver
+DELETE FROM air_quality_data WHERE pollutant_level > 150;DELETE;Success;location,pollutant_level;air_quality_data;PostgreSQL
+SELECT * FROM fruits;SELECT;Success;fruit_id,fruit_name,color,taste;fruits;MySQL
+INSERT INTO fruits (fruit_name, color, taste) VALUES ('Apple', 'Red', 'Sweet');INSERT;Success;fruit_name,color,taste;fruits;MySQL
+UPDATE fruits SET color = 'Yellow' WHERE fruit_id = 1;UPDATE;Success;color;fruits;MySQL
+SELECT * FROM fruits;SELECT;Success;fruit_id,fruit_name,color,taste;fruits;sqlserver
+INSERT INTO fruits (fruit_name, color, taste) VALUES ('Banana', 'Yellow', 'Sweet');INSERT;Success;fruit_name,color,taste;fruits;sqlserver
+UPDATE fruits SET color = 'Green' WHERE fruit_id = 2;UPDATE;Success;color;fruits;sqlserver
+SELECT * FROM fruits;SELECT;Success;fruit_id,fruit_name,color,taste;fruits;PostgreSQL
+INSERT INTO fruits (fruit_name, color, taste) VALUES ('Grapes', 'Purple', 'Sweet');INSERT;Success;fruit_name,color,taste;fruits;PostgreSQL
+UPDATE fruits SET color = 'Green' WHERE fruit_id = 3;UPDATE;Success;color;fruits;PostgreSQL
+SELECT * FROM highrise_buildings;SELECT;Success;building_id,building_name,location,floors;highrise_buildings;MySQL
+INSERT INTO highrise_buildings (building_name, location, floors) VALUES ('Sky Tower', 'New York', 50);INSERT;Success;building_name,location,floors;highrise_buildings;MySQL
+UPDATE highrise_buildings SET floors = 60 WHERE building_id = 1;UPDATE;Success;floors;highrise_buildings;MySQL
+SELECT * FROM highrise_buildings;SELECT;Success;building_id,building_name,location,floors;highrise_buildings;sqlserver
+INSERT INTO highrise_buildings (building_name, location, floors) VALUES ('City Center Plaza', 'Chicago', 40);INSERT;Success;building_name,location,floors;highrise_buildings;sqlserver
+UPDATE highrise_buildings SET floors = 45 WHERE building_id = 2;UPDATE;Success;floors;highrise_buildings;sqlserver
+SELECT * FROM highrise_buildings;SELECT;Success;building_id,building_name,location,floors;highrise_buildings;PostgreSQL
+INSERT INTO highrise_buildings (building_name, location, floors) VALUES ('Sunset Heights', 'Los Angeles', 30);INSERT;Success;building_name,location,floors;highrise_buildings;PostgreSQL
+UPDATE highrise_buildings SET floors = 35 WHERE building_id = 3;UPDATE;Success;floors;highrise_buildings;PostgreSQL
+SELECT * FROM bus_traffic_routes;SELECT;Success;route_id,route_name,start_location,end_location;bus_traffic_routes;MySQL
+INSERT INTO bus_traffic_routes (route_name, start_location, end_location) VALUES ('City Express', 'Downtown', 'Suburbia');INSERT;Success;route_name,start_location,end_location;bus_traffic_routes;MySQL
+UPDATE bus_traffic_routes SET end_location = 'Shopping Mall' WHERE route_id = 1;UPDATE;Success;end_location;bus_traffic_routes;MySQL
+SELECT * FROM bus_traffic_routes;SELECT;Success;route_id,route_name,start_location,end_location;bus_traffic_routes;sqlserver
+INSERT INTO bus_traffic_routes (route_name, start_location, end_location) VALUES ('Suburban Shuttle', 'Residential Area', 'Business District');INSERT;Success;route_name,start_location,end_location;bus_traffic_routes;sqlserver
+UPDATE bus_traffic_routes SET end_location = 'Airport' WHERE route_id = 2;UPDATE;Success;end_location;bus_traffic_routes;sqlserver
+SELECT * FROM bus_traffic_routes;SELECT;Success;route_id,route_name,start_location,end_location;bus_traffic_routes;PostgreSQL
+INSERT INTO bus_traffic_routes (route_name, start_location, end_location) VALUES ('Rapid Transit', 'Downtown', 'University Campus');INSERT;Success;route_name,start_location,end_location;bus_traffic_routes;PostgreSQL
+UPDATE bus_traffic_routes SET end_location = 'Hospital' WHERE route_id = 3;UPDATE;Success;end_location;bus_traffic_routes;PostgreSQL
+SELECT * FROM university_students;SELECT;Success;student_id,student_name,major,year;university_students;MySQL
+INSERT INTO university_students (student_name, major, year) VALUES ('Alice Smith', 'Computer Science', 'Sophomore');INSERT;Success;student_name,major,year;university_students;MySQL
+UPDATE university_students SET year = 'Junior' WHERE student_id = 1;UPDATE;Success;year;university_students;MySQL
+SELECT * FROM university_students;SELECT;Success;student_id,student_name,major,year;university_students;sqlserver
+INSERT INTO university_students (student_name, major, year) VALUES ('Bob Johnson', 'Business Administration', 'Freshman');INSERT;Success;student_name,major,year;university_students;sqlserver
+UPDATE university_students SET year = 'Sophomore' WHERE student_id = 2;UPDATE;Success;year;university_students;sqlserver
+SELECT * FROM university_students;SELECT;Success;student_id,student_name,major,year;university_students;PostgreSQL
+INSERT INTO university_students (student_name, major, year) VALUES ('Cathy Davis', 'Psychology', 'Senior');INSERT;Success;student_name,major,year;university_students;PostgreSQL
+UPDATE university_students SET year = 'Graduate' WHERE student_id = 3;UPDATE;Success;year;university_students;PostgreSQL
+SELECT * FROM shipping_route;SELECT;Success;route_id,origin,destination,distance;shipping_route;MySQL
+INSERT INTO shipping_route (origin, destination, distance) VALUES ('Port A', 'City B', 200);INSERT;Success;origin,destination,distance;shipping_route;MySQL
+UPDATE shipping_route SET distance = 250 WHERE route_id = 1;UPDATE;Success;distance;shipping_route;MySQL
+SELECT * FROM shipping_route;SELECT;Success;route_id,origin,destination,distance;shipping_route;sqlserver
+INSERT INTO shipping_route (origin, destination, distance) VALUES ('City X', 'City Y', 150);INSERT;Success;origin,destination,distance;shipping_route;sqlserver
+UPDATE shipping_route SET distance = 180 WHERE route_id = 2;UPDATE;Success;distance;shipping_route;sqlserver
+SELECT * FROM shipping_route;SELECT;Success;route_id,origin,destination,distance;shipping_route;PostgreSQL
+INSERT INTO shipping_route (origin, destination, distance) VALUES ('Port C', 'City D', 300);INSERT;Success;origin,destination,distance;shipping_route;PostgreSQL
+UPDATE shipping_route SET distance = 280 WHERE route_id = 3;UPDATE;Success;distance;shipping_route;PostgreSQL
+SELECT * FROM geofences;SELECT;Success;geofence_id,area_name,coordinates;geofences;MySQL
+INSERT INTO geofences (area_name, coordinates) VALUES ('Park A', '35.6895, 139.6917');INSERT;Success;area_name,coordinates;geofences;MySQL
+UPDATE geofences SET coordinates = '40.7128, -74.0060' WHERE geofence_id = 1;UPDATE;Success;coordinates;geofences;MySQL
+SELECT * FROM keywords;SELECT;Success;keyword_id,word,category;keywords;MySQL
+INSERT INTO keywords (word, category) VALUES ('Technology', 'Science');INSERT;Success;word,category;keywords;MySQL
+UPDATE keywords SET category = 'Computing' WHERE keyword_id = 1;UPDATE;Success;category;keywords;MySQL
+SELECT * FROM animals;SELECT;Success;animal_id,species,habitat;animals;MySQL
+INSERT INTO animals (species, habitat) VALUES ('Tiger', 'Jungle');INSERT;Success;species,habitat;animals;MySQL
+UPDATE animals SET habitat = 'Savannah' WHERE animal_id = 1;UPDATE;Success;habitat;animals;MySQL
+SELECT * FROM tree_types;SELECT;Success;tree_id,type,location;tree_types;MySQL
+INSERT INTO tree_types (type, location) VALUES ('Oak', 'Forest');INSERT;Success;type,location;tree_types;MySQL
+UPDATE tree_types SET location = 'Park' WHERE tree_id = 1;UPDATE;Success;location;tree_types;MySQL
+SELECT * FROM tourist_hubs;SELECT;Success;hub_id,name,location;tourist_hubs;MySQL
+INSERT INTO tourist_hubs (name, location) VALUES ('Landmark A', 'City X');INSERT;Success;name,location;tourist_hubs;MySQL
+UPDATE tourist_hubs SET location = 'Island Resort' WHERE hub_id = 1;UPDATE;Success;location;tourist_hubs;MySQL
+SELECT * FROM geofences;SELECT;Success;geofence_id,area_name,coordinates;geofences;sqlserver
+INSERT INTO geofences (area_name, coordinates) VALUES ('Zone 1', '40.7128, -74.0060');INSERT;Success;area_name,coordinates;geofences;sqlserver
+UPDATE geofences SET coordinates = '37.7749, -122.4194' WHERE geofence_id = 1;UPDATE;Success;coordinates;geofences;sqlserver
+SELECT * FROM keywords;SELECT;Success;keyword_id,word,category;keywords;sqlserver
+INSERT INTO keywords (word, category) VALUES ('Innovation', 'Technology');INSERT;Success;word,category;keywords;sqlserver
+UPDATE keywords SET category = 'Research' WHERE keyword_id = 1;UPDATE;Success;category;keywords;sqlserver
+SELECT * FROM animals;SELECT;Success;animal_id,species,habitat;animals;sqlserver
+INSERT INTO animals (species, habitat) VALUES ('Elephant', 'Savannah');INSERT;Success;species,habitat;animals;sqlserver
+UPDATE animals SET habitat = 'Zoo' WHERE animal_id = 1;UPDATE;Success;habitat;animals;sqlserver
+SELECT * FROM tree_types;SELECT;Success;tree_id,type,location;tree_types;sqlserver
+INSERT INTO tree_types (type, location) VALUES ('Maple', 'Park');INSERT;Success;type,location;tree_types;sqlserver
+UPDATE tree_types SET location = 'Residential Area' WHERE tree_id = 1;UPDATE;Success;location;tree_types;sqlserver
+SELECT * FROM tourist_hubs;SELECT;Success;hub_id,name,location;tourist_hubs;sqlserver
+INSERT INTO tourist_hubs (name, location) VALUES ('Historical Site B', 'City Y');INSERT;Success;name,location;tourist_hubs;sqlserver
+UPDATE tourist_hubs SET location = 'Beach Resort' WHERE hub_id = 1;UPDATE;Success;location;tourist_hubs;sqlserver
+SELECT * FROM geofences;SELECT;Success;geofence_id,area_name,coordinates;geofences;PostgreSQL
+INSERT INTO geofences (area_name, coordinates) VALUES ('Green Area', '37.7749, -122.4194');INSERT;Success;area_name,coordinates;geofences;PostgreSQL
+UPDATE geofences SET coordinates = '35.6895, 139.6917' WHERE geofence_id = 1;UPDATE;Success;coordinates;geofences;PostgreSQL
+SELECT * FROM keywords;SELECT;Success;keyword_id,word,category;keywords;PostgreSQL
+INSERT INTO keywords (word, category) VALUES ('Nature', 'Environment');INSERT;Success;word,category;keywords;PostgreSQL
+UPDATE keywords SET category = 'Ecology' WHERE keyword_id = 1;UPDATE;Success;category;keywords;PostgreSQL
+SELECT * FROM animals;SELECT;Success;animal_id,species,habitat;animals;PostgreSQL
+INSERT INTO animals (species, habitat) VALUES ('Penguin', 'Polar Region');INSERT;Success;species,habitat;animals;PostgreSQL
+UPDATE animals SET habitat = 'Aquarium' WHERE animal_id = 1;UPDATE;Success;habitat;animals;PostgreSQL
+SELECT * FROM tree_types;SELECT;Success;tree_id,type,location;tree_types;PostgreSQL
+INSERT INTO tree_types (type, location) VALUES ('Pine', 'Forest');INSERT;Success;type,location;tree_types;PostgreSQL
+UPDATE tree_types SET location = 'Botanical Garden' WHERE tree_id = 1;UPDATE;Success;location;tree_types;PostgreSQL
+SELECT * FROM tourist_hubs;SELECT;Success;hub_id,name,location;tourist_hubs;PostgreSQL
+INSERT INTO tourist_hubs (name, location) VALUES ('Scenic Spot C', 'Mountain Range');INSERT;Success;name,location;tourist_hubs;PostgreSQL
+UPDATE tourist_hubs SET location = 'National Park' WHERE hub_id = 1;UPDATE;Success;location;tourist_hubs;PostgreSQL
+SELECT * FROM airlines_travels;SELECT;Success;flight_id,airline,origin,destination;airlines_travels;MySQL
+INSERT INTO airlines_travels (airline, origin, destination) VALUES ('Delta Airlines', 'New York', 'Los Angeles');INSERT;Success;airline,origin,destination;airlines_travels;MySQL
+UPDATE airlines_travels SET destination = 'San Francisco' WHERE flight_id = 1;UPDATE;Success;destination;airlines_travels;MySQL
+SELECT * FROM employees;SELECT;Success;employee_id,name,position,department;employees;MySQL
+INSERT INTO employees (name, position, department) VALUES ('Mary Johnson', 'Manager', 'Human Resources');INSERT;Success;name,position,department;employees;MySQL
+UPDATE employees SET department = 'Finance' WHERE employee_id = 1;UPDATE;Success;department;employees;MySQL
+SELECT * FROM crime_statistics;SELECT;Success;crime_id,crime_type,location,date;crime_statistics;MySQL
+INSERT INTO crime_statistics (crime_type, location, date) VALUES ('Burglary', 'City A', '2022-01-20');INSERT;Success;crime_type,location,date;crime_statistics;MySQL
+UPDATE crime_statistics SET location = 'Suburb B' WHERE crime_id = 1;UPDATE;Success;location;crime_statistics;MySQL
+SELECT * FROM fishes;SELECT;Success;fish_id,species,habitat;fishes;MySQL
+INSERT INTO fishes (species, habitat) VALUES ('Rainbow Trout', 'River');INSERT;Success;species,habitat;fishes;MySQL
+UPDATE fishes SET habitat = 'Lake' WHERE fish_id = 1;UPDATE;Success;habitat;fishes;MySQL
+SELECT * FROM airlines_travels;SELECT;Success;flight_id,airline,origin,destination;airlines_travels;sqlserver
+INSERT INTO airlines_travels (airline, origin, destination) VALUES ('American Airlines', 'Chicago', 'Miami');INSERT;Success;airline,origin,destination;airlines_travels;sqlserver
+UPDATE airlines_travels SET destination = 'Houston' WHERE flight_id = 1;UPDATE;Success;destination;airlines_travels;sqlserver
+SELECT * FROM employees;SELECT;Success;employee_id,name,position,department;employees;sqlserver
+INSERT INTO employees (name, position, department) VALUES ('John Smith', 'Analyst', 'Marketing');INSERT;Success;name,position,department;employees;sqlserver
+UPDATE employees SET department = 'Sales' WHERE employee_id = 1;UPDATE;Success;department;employees;sqlserver
+SELECT * FROM crime_statistics;SELECT;Success;crime_id,crime_type,location,date;crime_statistics;sqlserver
+INSERT INTO crime_statistics (crime_type, location, date) VALUES ('Assault', 'City X', '2022-02-15');INSERT;Success;crime_type,location,date;crime_statistics;sqlserver
+UPDATE crime_statistics SET location = 'Suburb Y' WHERE crime_id = 1;UPDATE;Success;location;crime_statistics;sqlserver
+SELECT * FROM fishes;SELECT;Success;fish_id,species,habitat;fishes;sqlserver
+INSERT INTO fishes (species, habitat) VALUES ('Salmon', 'Ocean');INSERT;Success;species,habitat;fishes;sqlserver
+UPDATE fishes SET habitat = 'Sea' WHERE fish_id = 1;UPDATE;Success;habitat;fishes;sqlserver
+SELECT * FROM airlines_travels;SELECT;Success;flight_id,airline,origin,destination;airlines_travels;PostgreSQL
+INSERT INTO airlines_travels (airline, origin, destination) VALUES ('United Airlines', 'San Francisco', 'Seattle');INSERT;Success;airline,origin,destination;airlines_travels;PostgreSQL
+UPDATE airlines_travels SET destination = 'Portland' WHERE flight_id = 1;UPDATE;Success;destination;airlines_travels;PostgreSQL
+SELECT * FROM employees;SELECT;Success;employee_id,name,position,department;employees;PostgreSQL
+INSERT INTO employees (name, position, department) VALUES ('Jane Doe', 'Engineer', 'Technology');INSERT;Success;name,position,department;employees;PostgreSQL
+UPDATE employees SET department = 'IT' WHERE employee_id = 1;UPDATE;Success;department;employees;PostgreSQL
+SELECT * FROM crime_statistics;SELECT;Success;crime_id,crime_type,location,date;crime_statistics;PostgreSQL
+INSERT INTO crime_statistics (crime_type, location, date) VALUES ('Robbery', 'City Z', '2022-03-10');INSERT;Success;crime_type,location,date;crime_statistics;PostgreSQL
+UPDATE crime_statistics SET location = 'Suburb W' WHERE crime_id = 1;UPDATE;Success;location;crime_statistics;PostgreSQL
+SELECT * FROM fishes;SELECT;Success;fish_id,species,habitat;fishes;PostgreSQL
+INSERT INTO fishes (species, habitat) VALUES ('Trout', 'Lake');INSERT;Success;species,habitat;fishes;PostgreSQL
+UPDATE fishes SET habitat = 'River' WHERE fish_id = 1;UPDATE;Success;habitat;fishes;PostgreSQL
+SELECT * FROM domestic_violence;SELECT;Success;incident_id,location,date,severity;domestic_violence;MySQL
+INSERT INTO domestic_violence (location, date, severity) VALUES ('City P', '2022-04-05', 'High');INSERT;Success;location,date,severity;domestic_violence;MySQL
+UPDATE domestic_violence SET severity = 'Critical' WHERE incident_id = 1;UPDATE;Success;severity;domestic_violence;MySQL
+SELECT * FROM imdb;SELECT;Success;movie_id,title,genre,release_date;imdb;MySQL
+INSERT INTO imdb (title, genre, release_date) VALUES ('Inception', 'Sci-Fi', '2010-07-16');INSERT;Success;title,genre,release_date;imdb;MySQL
+UPDATE imdb SET genre = 'Action' WHERE movie_id = 1;UPDATE;Success;genre;imdb;MySQL
+SELECT * FROM housing;SELECT;Success;property_id,location,type,price;housing;MySQL
+INSERT INTO housing (location, type, price) VALUES ('Suburb C', 'Apartment', 120000);INSERT;Success;location,type,price;housing;MySQL
+UPDATE housing SET price = 150000 WHERE property_id = 1;UPDATE;Success;price;housing;MySQL
+SELECT * FROM parks;SELECT;Success;park_id,name,location,size;parks;MySQL
+INSERT INTO parks (name, location, size) VALUES ('Green Oasis', 'City Q', 'Medium');INSERT;Success;name,location,size;parks;MySQL
+UPDATE parks SET size = 'Large' WHERE park_id = 1;UPDATE;Success;size;parks;MySQL
+SELECT * FROM domestic_violence;SELECT;Success;incident_id,location,date,severity;domestic_violence;sqlserver
+INSERT INTO domestic_violence (location, date, severity) VALUES ('City R', '2022-05-12', 'Moderate');INSERT;Success;location,date,severity;domestic_violence;sqlserver
+UPDATE domestic_violence SET severity = 'Low' WHERE incident_id = 1;UPDATE;Success;severity;domestic_violence;sqlserver
+SELECT * FROM imdb;SELECT;Success;movie_id,title,genre,release_date;imdb;sqlserver
+INSERT INTO imdb (title, genre, release_date) VALUES ('The Dark Knight', 'Action', '2008-07-18');INSERT;Success;title,genre,release_date;imdb;sqlserver
+UPDATE imdb SET genre = 'Crime' WHERE movie_id = 1;UPDATE;Success;genre;imdb;sqlserver
+SELECT * FROM housing;SELECT;Success;property_id,location,type,price;housing;sqlserver
+INSERT INTO housing (location, type, price) VALUES ('Downtown Loft', 'Condo', 250000);INSERT;Success;location,type,price;housing;sqlserver
+UPDATE housing SET price = 280000 WHERE property_id = 1;UPDATE;Success;price;housing;sqlserver
+SELECT * FROM parks;SELECT;Success;park_id,name,location,size;parks;sqlserver
+INSERT INTO parks (name, location, size) VALUES ('City Center Park', 'City S', 'Large');INSERT;Success;name,location,size;parks;sqlserver
+UPDATE parks SET size = 'Extra Large' WHERE park_id = 1;UPDATE;Success;size;parks;sqlserver
+SELECT * FROM domestic_violence;SELECT;Success;incident_id,location,date,severity;domestic_violence;PostgreSQL
+INSERT INTO domestic_violence (location, date, severity) VALUES ('City T', '2022-06-20', 'High');INSERT;Success;location,date,severity;domestic_violence;PostgreSQL
+UPDATE domestic_violence SET severity = 'Critical' WHERE incident_id = 1;UPDATE;Success;severity;domestic_violence;PostgreSQL
+SELECT * FROM imdb;SELECT;Success;movie_id,title,genre,release_date;imdb;PostgreSQL
+INSERT INTO imdb (title, genre, release_date) VALUES ('Pulp Fiction', 'Crime', '1994-10-14');INSERT;Success;title,genre,release_date;imdb;PostgreSQL
+UPDATE imdb SET genre = 'Drama' WHERE movie_id = 1;UPDATE;Success;genre;imdb;PostgreSQL
+SELECT * FROM housing;SELECT;Success;property_id,location,type,price;housing;PostgreSQL
+INSERT INTO housing (location, type, price) VALUES ('Luxury Villa', 'House', 500000);INSERT;Success;location,type,price;housing;PostgreSQL
+UPDATE housing SET price = 550000 WHERE property_id = 1;UPDATE;Success;price;housing;PostgreSQL
+SELECT * FROM parks;SELECT;Success;park_id,name,location,size;parks;PostgreSQL
+INSERT INTO parks (name, location, size) VALUES ('Sunny Meadows', 'City U', 'Small');INSERT;Success;name,location,size;parks;PostgreSQL
+UPDATE parks SET size = 'Medium' WHERE park_id = 1;UPDATE;Success;size;parks;PostgreSQL
+SELECT * FROM paintings;SELECT;Success;painting_id,title,artist,style;paintings;MySQL
+INSERT INTO paintings (title, artist, style) VALUES ('Starry Night', 'Vincent van Gogh', 'Post-Impressionism');INSERT;Success;title,artist,style;paintings;MySQL
+UPDATE paintings SET style = 'Modern Art' WHERE painting_id = 1;UPDATE;Success;style;paintings;MySQL
+SELECT * FROM home_types;SELECT;Success;type_id,name,structure;home_types;MySQL
+INSERT INTO home_types (name, structure) VALUES ('Single-Family Home', 'Detached');INSERT;Success;name,structure;home_types;MySQL
+UPDATE home_types SET structure = 'Attached' WHERE type_id = 1;UPDATE;Success;structure;home_types;MySQL
+SELECT * FROM home_appliances;SELECT;Success;appliance_id,name,category;home_appliances;MySQL
+INSERT INTO home_appliances (name, category) VALUES ('Refrigerator', 'Kitchen');INSERT;Success;name,category;home_appliances;MySQL
+UPDATE home_appliances SET category = 'Appliances' WHERE appliance_id = 1;UPDATE;Success;category;home_appliances;MySQL
+SELECT * FROM paintings;SELECT;Success;painting_id,title,artist,style;paintings;sqlserver
+INSERT INTO paintings (title, artist, style) VALUES ('The Persistence of Memory', 'Salvador Dalí', 'Surrealism');INSERT;Success;title,artist,style;paintings;sqlserver
+UPDATE paintings SET style = 'Abstract' WHERE painting_id = 1;UPDATE;Success;style;paintings;sqlserver
+SELECT * FROM home_types;SELECT;Success;type_id,name,structure;home_types;sqlserver
+INSERT INTO home_types (name, structure) VALUES ('Condo', 'Attached');INSERT;Success;name,structure;home_types;sqlserver
+UPDATE home_types SET structure = 'Detached' WHERE type_id = 1;UPDATE;Success;structure;home_types;sqlserver
+SELECT * FROM home_appliances;SELECT;Success;appliance_id,name,category;home_appliances;sqlserver
+INSERT INTO home_appliances (name, category) VALUES ('Washing Machine', 'Laundry');INSERT;Success;name,category;home_appliances;sqlserver
+UPDATE home_appliances SET category = 'Household' WHERE appliance_id = 1;UPDATE;Success;category;home_appliances;sqlserver
+SELECT * FROM paintings;SELECT;Success;painting_id,title,artist,style;paintings;PostgreSQL
+INSERT INTO paintings (title, artist, style) VALUES ('Mona Lisa', 'Leonardo da Vinci', 'Renaissance');INSERT;Success;title,artist,style;paintings;PostgreSQL
+UPDATE paintings SET style = 'Classic' WHERE painting_id = 1;UPDATE;Success;style;paintings;PostgreSQL
+SELECT * FROM home_types;SELECT;Success;type_id,name,structure;home_types;PostgreSQL
+INSERT INTO home_types (name, structure) VALUES ('Townhouse', 'Attached');INSERT;Success;name,structure;home_types;PostgreSQL
+UPDATE home_types SET structure = 'Detached' WHERE type_id = 1;UPDATE;Success;structure;home_types;PostgreSQL
+SELECT * FROM home_appliances;SELECT;Success;appliance_id,name,category;home_appliances;PostgreSQL
+INSERT INTO home_appliances (name, category) VALUES ('Microwave Oven', 'Kitchen');INSERT;Success;name,category;home_appliances;PostgreSQL
+UPDATE home_appliances SET category = 'Electronics' WHERE appliance_id = 1;UPDATE;Success;category;home_appliances;PostgreSQL
+SELECT * FROM illness;SELECT;Success;patient_id,condition,symptoms,treatment;illness;MySQL
+INSERT INTO illness (condition, symptoms, treatment) VALUES ('Flu', 'Fever, cough, fatigue', 'Rest and fluids');INSERT;Success;condition,symptoms,treatment;illness;MySQL
+UPDATE illness SET treatment = 'Antibiotics' WHERE patient_id = 1;UPDATE;Success;treatment;illness;MySQL
+SELECT * FROM boxing;SELECT;Success;match_id,fighter1,fighter2,rounds,winner;boxing;MySQL
+INSERT INTO boxing (fighter1, fighter2, rounds, winner) VALUES ('Mike Tyson', 'Muhammad Ali', 12, 'Mike Tyson');INSERT;Success;fighter1,fighter2,rounds,winner;boxing;MySQL
+UPDATE boxing SET winner = 'Draw' WHERE match_id = 1;UPDATE;Success;winner;boxing;MySQL
+SELECT * FROM f1_races;SELECT;Success;race_id,circuit,location,winner;f1_races;MySQL
+INSERT INTO f1_races (circuit, location, winner) VALUES ('Monaco Grand Prix', 'Monte Carlo', 'Lewis Hamilton');INSERT;Success;circuit,location,winner;f1_races;MySQL
+UPDATE f1_races SET winner = 'Max Verstappen' WHERE race_id = 1;UPDATE;Success;winner;f1_races;MySQL
+SELECT * FROM football;SELECT;Success;match_id,team1,team2,score,winner;football;MySQL
+INSERT INTO football (team1, team2, score, winner) VALUES ('Barcelona', 'Real Madrid', '3-2', 'Barcelona');INSERT;Success;team1,team2,score,winner;football;MySQL
+UPDATE football SET winner = 'Draw' WHERE match_id = 1;UPDATE;Success;winner;football;MySQL
+SELECT * FROM cricket;SELECT;Success;match_id,team1,team2,score,winner;cricket;MySQL
+INSERT INTO cricket (team1, team2, score, winner) VALUES ('India', 'Australia', '250-200', 'India');INSERT;Success;team1,team2,score,winner;cricket;MySQL
+UPDATE cricket SET winner = 'Australia' WHERE match_id = 1;UPDATE;Success;winner;cricket;MySQL
+SELECT * FROM weight_lifting;SELECT;Success;lift_id,athlete,weight_class,weight_lifted,result;weight_lifting;MySQL
+INSERT INTO weight_lifting (athlete, weight_class, weight_lifted, result) VALUES ('John Smith', 'Heavyweight', '200 kg', 'Gold');INSERT;Success;athlete,weight_class,weight_lifted,result;weight_lifting;MySQL
+UPDATE weight_lifting SET result = 'Silver' WHERE lift_id = 1;UPDATE;Success;result;weight_lifting;MySQL
+SELECT * FROM illness;SELECT;Success;patient_id,condition,symptoms,treatment;illness;sqlserver
+INSERT INTO illness (condition, symptoms, treatment) VALUES ('Allergies', 'Sneezing, itching, congestion', 'Antihistamines');INSERT;Success;condition,symptoms,treatment;illness;sqlserver
+UPDATE illness SET treatment = 'Nasal Spray' WHERE patient_id = 1;UPDATE;Success;treatment;illness;sqlserver
+SELECT * FROM boxing;SELECT;Success;match_id,fighter1,fighter2,rounds,winner;boxing;sqlserver
+INSERT INTO boxing (fighter1, fighter2, rounds, winner) VALUES ('Floyd Mayweather', 'Manny Pacquiao', 12, 'Floyd Mayweather');INSERT;Success;fighter1,fighter2,rounds,winner;boxing;sqlserver
+UPDATE boxing SET winner = 'Manny Pacquiao' WHERE match_id = 1;UPDATE;Success;winner;boxing;sqlserver
+SELECT * FROM f1_races;SELECT;Success;race_id,circuit,location,winner;f1_races;sqlserver
+INSERT INTO f1_races (circuit, location, winner) VALUES ('Silverstone Circuit', 'Silverstone', 'Valtteri Bottas');INSERT;Success;circuit,location,winner;f1_races;sqlserver
+UPDATE f1_races SET winner = 'Lewis Hamilton' WHERE race_id = 1;UPDATE;Success;winner;f1_races;sqlserver
+SELECT * FROM football;SELECT;Success;match_id,team1,team2,score,winner;football;sqlserver
+INSERT INTO football (team1, team2, score, winner) VALUES ('Manchester United', 'Liverpool', '2-1', 'Manchester United');INSERT;Success;team1,team2,score,winner;football;sqlserver
+UPDATE football SET winner = 'Liverpool' WHERE match_id = 1;UPDATE;Success;winner;football;sqlserver
+SELECT * FROM cricket;SELECT;Success;match_id,team1,team2,score,winner;cricket;sql
+SELECT * FROM illness;SELECT;Success;patient_id,condition,symptoms,treatment;illness;PostgreSQL
+INSERT INTO illness (condition, symptoms, treatment) VALUES ('Common Cold', 'Runny nose, cough, sore throat', 'Rest and fluids');INSERT;Success;condition,symptoms,treatment;illness;PostgreSQL
+UPDATE illness SET treatment = 'Medication' WHERE patient_id = 1;UPDATE;Success;treatment;illness;PostgreSQL
+SELECT * FROM boxing;SELECT;Success;match_id,fighter1,fighter2,rounds,winner;boxing;PostgreSQL
+INSERT INTO boxing (fighter1, fighter2, rounds, winner) VALUES ('Evander Holyfield', 'Mike Tyson', 10, 'Draw');INSERT;Success;fighter1,fighter2,rounds,winner;boxing;PostgreSQL
+UPDATE boxing SET winner = 'Mike Tyson' WHERE match_id = 1;UPDATE;Success;winner;boxing;PostgreSQL
+SELECT * FROM f1_races;SELECT;Success;race_id,circuit,location,winner;f1_races;PostgreSQL
+INSERT INTO f1_races (circuit, location, winner) VALUES ('Monza', 'Italy', 'Lewis Hamilton');INSERT;Success;circuit,location,winner;f1_races;PostgreSQL
+UPDATE f1_races SET winner = 'Max Verstappen' WHERE race_id = 1;UPDATE;Success;winner;f1_races;PostgreSQL
+SELECT * FROM football;SELECT;Success;match_id,team1,team2,score,winner;football;PostgreSQL
+INSERT INTO football (team1, team2, score, winner) VALUES ('Bayern Munich', 'Real Madrid', '3-2', 'Bayern Munich');INSERT;Success;team1,team2,score,winner;football;PostgreSQL
+UPDATE football SET winner = 'Draw' WHERE match_id = 1;UPDATE;Success;winner;football;PostgreSQL
+SELECT * FROM cricket;SELECT;Success;match_id,team1,team2,score,winner;cricket;PostgreSQL
+INSERT INTO cricket (team1, team2, score, winner) VALUES ('England', 'India', '280-220', 'England');INSERT;Success;team1,team2,score,winner;cricket;PostgreSQL
+UPDATE cricket SET winner = 'India' WHERE match_id = 1;UPDATE;Success;winner;cricket;PostgreSQL
+SELECT * FROM weight_lifting;SELECT;Success;lift_id,athlete,weight_class,weight_lifted,result;weight_lifting;PostgreSQL
+INSERT INTO weight_lifting (athlete, weight_class, weight_lifted, result) VALUES ('Emily Johnson', 'Lightweight', '120 kg', 'Gold');INSERT;Success;athlete,weight_class,weight_lifted,result;weight_lifting;PostgreSQL
+UPDATE weight_lifting SET result = 'Silver' WHERE lift_id = 1;UPDATE;Success;result;weight_lifting;PostgreSQL
