@@ -161,3 +161,5 @@ cython_debug/
 
 nltk_datasets/
 .DS_Store
+
+img/*
