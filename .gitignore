@@ -163,3 +163,5 @@ nltk_datasets/
 .DS_Store
 
 img/*
+
+datasets/*
