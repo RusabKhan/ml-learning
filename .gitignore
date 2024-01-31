@@ -162,6 +162,6 @@ cython_debug/
 nltk_datasets/
 .DS_Store
 
-img/*
-
 datasets/unprocessed_data/*
+nltk_datasets/*
+datasets/*
