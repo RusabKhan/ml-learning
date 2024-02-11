@@ -45,18 +45,9 @@ distro==1.9.0
 dm-tree==0.1.8
 dpath==2.1.6
 dulwich==0.21.7
-dvc==3.38.1
-dvc-data==3.7.0
-dvc-http==2.32.0
-dvc-objects==3.0.3
-dvc-render==1.0.0
-dvc-studio-client==0.18.0
-dvc-task==0.3.0
-dvclive==3.5.1
 entrypoints==0.4
 etils==1.6.0
 executing==2.0.1
-fastapi==0.105.0
 ffmpy==0.3.1
 filelock==3.13.1
 flatbuffers==23.5.26
@@ -69,8 +60,6 @@ funcy==2.0
 gast==0.5.4
 gitdb==4.0.11
 GitPython==3.1.40
-google-auth==2.25.1
-google-auth-oauthlib==1.1.0
 google-pasta==0.2.0
 googleapis-common-protos==1.62.0
 gradio_client==0.7.3
@@ -156,7 +145,6 @@ pyparsing==3.1.1
 pyperclip==1.8.2
 python-dateutil==2.8.2
 python-multipart==0.0.6
-pytorch-lightning==2.1.2
 pytz==2023.3.post1
 PyYAML==6.0.1
 pyzmq==25.1.1
@@ -185,8 +173,6 @@ soxr==0.3.7
 sqltrie==0.11.0
 stack-data==0.6.3
 starlette==0.27.0
-streamlit==1.29.0
-streamlit-drawable-canvas==0.9.3
 sympy==1.12
 tabulate==0.9.0
 tenacity==8.2.3
