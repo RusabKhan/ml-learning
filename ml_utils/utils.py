@@ -11,18 +11,14 @@ from sklearn.calibration import LabelEncoder
 from sklearn.feature_extraction.text import TfidfVectorizer
 import nltk
 
-
-def __init__(self, root):
-    self.root = root
-    self.root.title("ML Utils")
-    dir = f"{os.getcwd()}/nltk_datasets"
-    nltk.data.path.append(dir)
-    nltk.download("stopwords", download_dir=dir)
-    nltk.download("punkt", download_dir=dir)
-    nltk.download("maxent_ne_chunker", download_dir=dir)
-    nltk.download("words", download_dir=dir)
-    nltk.download("tagsets", download_dir=dir)
-    nltk.download("averaged_perceptron_tagger", download_dir=dir)
+def download_nltk_datasets():
+    # nltk.data.path.append(dir)
+    nltk.download("stopwords")
+    nltk.download("punkt")
+    nltk.download("maxent_ne_chunker")
+    nltk.download("words")
+    nltk.download("tagsets")
+    nltk.download("averaged_perceptron_tagger")
 
 
 def remove_stopwords(text):
@@ -52,16 +48,16 @@ def extract_entities(text):
     return entities
 
 
-def create_tfidf_vectorizer(df):
+def create_tfidf_vectorizer(df,column):
     vectorizer = TfidfVectorizer(max_features=10000, use_idf=True)
     # Fit and transform the text data in the DataFrame column
-    tfidf_matrix = vectorizer.fit_transform(df["sentence"])
+    tfidf_matrix = vectorizer.fit_transform(df[column])
     # Convert the TF-IDF matrix to a DataFrame for visualization
     return tfidf_matrix.toarray()
 
 
-def tokenize_sentences(df):
-    tr_text = df["sentence"]
+def tokenize_sentences_by_columns(df,column):
+    tr_text = df[column]
     tokenizer = Tokenizer(num_words=10000)
     tokenizer.fit_on_texts(tr_text)
 
