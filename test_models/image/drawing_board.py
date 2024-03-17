@@ -1,6 +1,6 @@
 import tkinter as tk
 from PIL import Image, ImageDraw
-from utils import check
+from test_models.image.drawing_board_utils import check
 from datetime import datetime
 import time
 # Constants for canvas size and brush size
